@@ -7,8 +7,9 @@ alias sedit="vim ~/Repos/dotfiles/i3-config/st/config.h"
 alias ch="cd ~/.local/share/chezmoi"
 
 # Commands
-alias ll="ls -l"
-alias l="ls -lah"
+alias ll="exa -l"
+alias l="exa -la"
+alias lt="exa -lT"
 alias ssc="sudo systemctl"
 
 # Network
