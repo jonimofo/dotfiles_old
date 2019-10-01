@@ -33,7 +33,7 @@ alias dcw='docker-compose restart'
 alias dcl='docker-compose logs -f'
 alias dei='docker exec -it'
 
-# vagrant
+# Vagrant
 alias vu="vagrant up"
 alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"
@@ -59,9 +59,22 @@ alias gd="git diff"
 alias glog="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --stat"
 alias glg="git log --oneline --decorate --graph --all"
 
+# Fasd
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+alias v='f -e vim' # quick opening files with vim
+
+
+
 # Dossiers
 alias cc="cd ~/Documents/coursB3"
-alias v="cd ~/Vagrant"
+# alias v="cd ~/Vagrant"
 alias r="cd ~/Repos"
 alias doc="cd ~/Documents"
 alias dow="cd ~/Downloads"
@@ -76,7 +89,7 @@ alias t="cd ~/Templates"
 # Copy/Paste
 alias "cx=xclip" # copy to X clipboard (register *)
 alias "cs=xclip -selection clipboard" # copy to system wide clipboard (register +)
-alias "v=xclip -o" # output copied content (paste)
+#alias "v=xclip -o" # output copied content (paste)
 # alias "vs=xclip -o -selection clipboard" # paste from system wide clipboard (equivalent to `v -selection clipboard`)
 
 # Apps
