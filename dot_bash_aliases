@@ -11,6 +11,7 @@ alias ll="exa -l"
 alias l="exa -la"
 alias lt="exa -lT"
 alias ssc="sudo systemctl"
+alias cat="bat"
 
 # Network
 alias nmm='nmap 127.0.0.1'
@@ -70,26 +71,21 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim' # quick opening files with vim
 
-
-
 # Dossiers
-alias cc="cd ~/Documents/coursB3"
-# alias v="cd ~/Vagrant"
+alias ..="cd .."
+alias ...="cd ../.."
 alias r="cd ~/Repos"
 alias doc="cd ~/Documents"
 alias dow="cd ~/Downloads"
 alias de="cd ~/Desktop"
-alias dot="cd ~/Repos/dotfiles"
 alias i="cd ~/Isos"
-alias ..="cd .."
-alias ...="cd ../.."
 alias g="cd ~/Google-Drive"
 alias t="cd ~/Templates"
 
 # Copy/Paste
 alias "cx=xclip" # copy to X clipboard (register *)
 alias "cs=xclip -selection clipboard" # copy to system wide clipboard (register +)
-#alias "v=xclip -o" # output copied content (paste)
+# alias "v=xclip -o" # output copied content (paste)
 # alias "vs=xclip -o -selection clipboard" # paste from system wide clipboard (equivalent to `v -selection clipboard`)
 
 # Apps
