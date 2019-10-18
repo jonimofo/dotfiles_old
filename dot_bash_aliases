@@ -81,6 +81,7 @@ alias de="cd ~/Desktop"
 alias i="cd ~/Isos"
 alias g="cd ~/Google-Drive"
 alias t="cd ~/Templates"
+alias des="cd ~/Desktop"
 
 # Copy/Paste
 alias "cx=xclip" # copy to X clipboard (register *)
