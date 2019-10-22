@@ -2,8 +2,7 @@
 alias bedit="chezmoi edit ~/.bashrc"
 alias vedit="chezmoi edit ~/.vimrc"
 alias balias="chezmoi edit ~/.bash_aliases"
-alias ro="cd ~/Repos/dotfiles/i3config/rofi"
-alias sedit="vim ~/Repos/dotfiles/i3-config/st/config.h"
+alias tedit="chezmoi edit ~/.tmux.conf"
 alias ch="cd ~/.local/share/chezmoi"
 
 # Commands
@@ -77,7 +76,6 @@ alias ...="cd ../.."
 alias r="cd ~/Repos"
 alias doc="cd ~/Documents"
 alias dow="cd ~/Downloads"
-alias de="cd ~/Desktop"
 alias i="cd ~/Isos"
 alias g="cd ~/Google-Drive"
 alias t="cd ~/Templates"
