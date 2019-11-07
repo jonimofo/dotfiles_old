@@ -1,3 +1,5 @@
+alias python="/usr/local/bin/python3"
+
 # Edition of dotfiles
 alias bedit="chezmoi edit ~/.bashrc"
 alias vedit="chezmoi edit ~/.vimrc"
@@ -45,6 +47,8 @@ alias vgs="vagrant global-status"
 alias vd="vagrant destroy"
 alias vre="vagrant reload"
 
+# Virt Manager
+alias vircon='virt-manager -c qemu+ssh://jonimofo@163.172.4.183/system?socket=/var/run/libvirt/libvirt-sock &'
 # Tmux
 alias tma="tmux attach-session"
 

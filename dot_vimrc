@@ -89,6 +89,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "---------------------------------
 " Change auto-complete color
 highlight Pmenu ctermbg=gray guibg=gray
+colorscheme monokai
 
 " Status bas colorscheme
 let g:lightline = { 'colorscheme': 'wombat'}
