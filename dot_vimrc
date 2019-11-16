@@ -26,6 +26,9 @@ Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 Plug 'TonyChG/MagicTemplate'
 Plug 'tomtom/tcomment_vim'
 
+" Indenting
+Plug 'Vimjas/vim-python-pep8-indent'
+
 call plug#end()
 
 
@@ -80,6 +83,12 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Navigate between panes
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " Yank
 " TODO
 
@@ -89,6 +98,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "---------------------------------
 " Change auto-complete color
 highlight Pmenu ctermbg=gray guibg=gray
+" Color scheme
 colorscheme monokai
 
 " Status bas colorscheme
