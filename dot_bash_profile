@@ -1,9 +1,14 @@
 #TODO set different color if ROOT
 
+# Global
 export EDITOR="vim"
 export TERM="xterm-256color"
 export CLICOLOR=1
 
+# Clean history
+export HISTIGNORE=’ls:ll:lt:pwd:history’
+
+# Prompt
 export PS1="[\[$(tput sgr0)\]\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;10m\]@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]] \[$(tput sgr0)\]"
 
 # Fancier LESS (and man)

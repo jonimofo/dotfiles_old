@@ -3,6 +3,8 @@ alias bedit="chezmoi edit ~/.bashrc"
 alias vedit="chezmoi edit ~/.vimrc"
 alias balias="chezmoi edit ~/.bash_aliases"
 alias tedit="chezmoi edit ~/.tmux.conf"
+alias bprofile="chezmoi edit ~/.bash_profile"
+alias bala="chezmoi edit ~/.config/alacritty/alacritty.yml"
 alias ch="cd ~/.local/share/chezmoi"
 
 # Commands
@@ -17,7 +19,9 @@ alias vvenv="python3 -m venv venv"
 # Network
 alias nmm='nmap 127.0.0.1'
 alias sss='ss -s'
-alias ipinet='ip a | grep "inet "'
+# TODO
+alias ipinet='ip -4 a | grep inet'
+# alias ipinet="ip -4 a | grep inet | awk '{print $2}'"
 
 # Docker
 alias dc='docker-compose'
