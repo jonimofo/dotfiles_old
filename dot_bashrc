@@ -12,5 +12,8 @@ eval "$(fasd --init auto)"
 # Kcli
 eval "$(register-python-argcomplete kcli)"
 
+# Add to path for Ipython and Jupyter
+export PATH=$PATH:/home/mofo/.local/bin/
+
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
