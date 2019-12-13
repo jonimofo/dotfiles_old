@@ -1,3 +1,8 @@
+{{- if eq .chezmoi.hostname "lenovo" }}
+
+# Testing
+alias tototo="echo lenovo"
+
 # Edition of dotfiles
 alias bedit="chezmoi edit ~/.bashrc"
 alias vedit="chezmoi edit ~/.vimrc"
@@ -8,20 +13,22 @@ alias bala="chezmoi edit ~/.config/alacritty/alacritty.yml"
 alias ch="cd ~/.local/share/chezmoi"
 
 # Commands
+alias ls="exa"
 alias ll="exa -l"
 alias l="exa -la"
 alias lt="exa -lT"
 alias ssc="sudo systemctl"
 alias cat="bat"
 alias python="/usr/local/bin/python3"
-alias vvenv="python3 -m venv venv"
+alias vvenv="python3 -m venv venv && source venv/bin/activate"
 
 # Network
 alias nmm='nmap 127.0.0.1'
 alias sss='ss -s'
-# TODO
-alias ipinet='ip -4 a | grep inet'
-# alias ipinet="ip -4 a | grep inet | awk '{print $2}'"
+function ipinet(){
+ip -4 a | grep inet | awk '{print $2}'
+}
+alias ipinet=ipinet
 
 # Docker
 alias dc='docker-compose'
@@ -52,8 +59,10 @@ alias vdf="vagrant destroy -f"
 alias vre="vagrant reload"
 alias wss="watch vagrant status"
 
-# Virt Manager
-alias vircon='virt-manager -c qemu+ssh://jonimofo@163.172.4.183/system?socket=/var/run/libvirt/libvirt-sock &'
+# Kcli
+alias kedit="chezmoi edit ~/.kcli/config.yml"
+alias kcedit="chezmoi edit ~/.kcli/profiles.yml"
+
 # Tmux
 alias tma="tmux attach-session"
 
@@ -100,3 +109,10 @@ alias bsync="browser-sync start --server --files='style.css, *.html'"
 
 # Derp
 alias guigui="echo l'algo benji ! l'algo"
+
+{{- end }}
+
+### MAC OS
+{{- if eq .chezmoi.hostname "damien" }}
+alias titi="echo c'est Damien El Macbook"
+{{- end }}

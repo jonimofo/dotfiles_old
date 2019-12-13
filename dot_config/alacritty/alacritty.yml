@@ -230,16 +230,16 @@ colors:
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  dim:
-   black:   '0x000000'
-   red:     '0x8c3336'
-   green:   '0x7a8530'
-   yellow:  '0x97822e'
-   blue:    '0x506d8f'
-   magenta: '0x80638e'
-   cyan:    '0x497e7a'
-   white:   '0x9a9a9a'
-
+  # dim:
+  #  black:   '0x000000'
+  #  red:     '0x8c3336'
+  #  green:   '0x7a8530'
+  #  yellow:  '0x97822e'
+  #  blue:    '0x506d8f'
+  #  magenta: '0x80638e'
+  #  cyan:    '0x497e7a'
+  #  white:   '0x9a9a9a'
+  #
   # Indexed Colors
   #
   # The indexed colors include all colors from 16 to 256.
@@ -544,7 +544,6 @@ key_bindings:
 
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
-  - { key: V, mods: Control|Shift, action: Paste                             }
   - { key: L,        mods: Control, action: ClearLogNotice                   }
   - { key: L,        mods: Control, chars: "\x0c"                            }
   - { key: Home,     mods: Alt,     chars: "\x1b[1;3H"                       }
@@ -649,4 +648,4 @@ key_bindings:
   - { key: F11,      mods: Super,   chars: "\x1b[23;3~"                      }
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                      }
   - { key: NumpadEnter,             chars: "\n"                              }
-
+  - { key: V, mods: Control|Shift, action: Paste                             }

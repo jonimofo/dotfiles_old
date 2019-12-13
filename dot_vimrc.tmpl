@@ -1,7 +1,8 @@
-" TODO
-" Change color scheme
-" Yank stuff
-" Map qq to exit buffer from Documentation popup
+{{- if eq .chezmoi.hostname "lenovo" }}
+
+" TODO Change color scheme ?
+" TODO Yank stuff
+" TODO Map qq to exit buffer from Documentation popup
 
 "---------------------------------
 " PLUGINS
@@ -14,7 +15,7 @@ Plug 'itchyny/lightline.vim'
 " Completion
 Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " Searching
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -90,7 +91,6 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Yank
-" TODO
 
 
 "---------------------------------
@@ -103,3 +103,5 @@ colorscheme monokai
 
 " Status bas colorscheme
 let g:lightline = { 'colorscheme': 'wombat'}
+
+{{- end }}

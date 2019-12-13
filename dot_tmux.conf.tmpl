@@ -1,3 +1,5 @@
+{{- if eq .chezmoi.hostname "lenovo" }}
+
 # TODO unset le Shift+M (barre dégueu au milieu)
 # ----------------------------------------------------------
 #  Prefix & config
@@ -86,7 +88,8 @@ set -g pane-active-border-fg blue
 # ----------------------------------------------------------
 #  Status Bar
 # ----------------------------------------------------------
-set -g status-right '#[fg=black,bg=blue] #[fg=black]%a %Y-%m-%d %H:%M'
+# set -g status-right '#[fg=black,bg=blue] #[fg=black,bg=blue]%a %Y-%m-%d %H:%M'
+set -g status-right '#[fg=green] #[fg=black]%a %Y-%m-%d %H:%M'
 
 # ----------------------------------------------------------
 #  Utils
@@ -94,3 +97,5 @@ set -g status-right '#[fg=black,bg=blue] #[fg=black]%a %Y-%m-%d %H:%M'
 # prefix + { } # move to pane right/left
 # prefix + backspace # toggle between panes layouts
 # shift + mouse selection to select text properly
+
+{{- end }}
