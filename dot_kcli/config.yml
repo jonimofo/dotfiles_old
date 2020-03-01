@@ -22,7 +22,7 @@ local:
 # TODO kvm (mofoserver)
 mofoserver:
   host: kvm.mofo.ovh
-  user: jonimofo
+  user: mofo
   protocol: ssh
   pool: default
   type: kvm
