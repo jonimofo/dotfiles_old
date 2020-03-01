@@ -16,9 +16,8 @@ setw -g mode-keys vi
 
 # Set mouse support
 set -g mouse on
-set-option -g mouse-select-window on
-set-option -g mouse-select-pane on
-set-option -g mouse-resize-pane on
+# Source : https://github.com/gpakosz/.tmux/blob/master/.tmux.conf
+bind m run "cut -c3- ~/.tmux.conf | sh -s _toggle_mouse"
 
 # No delay for escape key press
 set -sg escape-time 0
@@ -78,18 +77,21 @@ bind-key o previous-window
 
 
 # ----------------------------------------------------------
-#  Style
+#  Theme
 # ----------------------------------------------------------
+# https://gist.github.com/spicycode/1229612
 set -g status-bg black
-set -g status-fg blue
-set -g pane-active-border-fg blue
+set -g status-fg white
 
 
 # ----------------------------------------------------------
 #  Status Bar
 # ----------------------------------------------------------
-# set -g status-right '#[fg=black,bg=blue] #[fg=black,bg=blue]%a %Y-%m-%d %H:%M'
-set -g status-right '#[fg=green] #[fg=black]%a %Y-%m-%d %H:%M'
+set -g status-interval 60
+set -g status-left-length 30
+set -g status-left '#[fg=green](#S) #(whoami) | '
+set -g status-right '#[fg=yellow]%H:%M '
+
 
 # ----------------------------------------------------------
 #  Utils
