@@ -4,15 +4,5 @@ Host *
 
 Host kvm
     HostName kvm.mofo.ovh
-    IdentityFile ~/.ssh/id_rsa_kvm
-    User jonimofo
-
-Host vm1
-    ProxyJump kvm
-    HostName 192.168.122.234
-    User centos
-
-Host vm2
-    ProxyJump kvm
-    HostName 192.168.122.96
-    User centos
+    IdentityFile ~/.ssh/id_rsa
+    User mofo
