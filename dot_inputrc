@@ -1,7 +1,9 @@
+$include /etc/inputrc
+
 # Ignore case while completing
 set completion-ignore-case On
 
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
-"\M-\C-[A": previous-history
-"\M-\C-[B": next-history
+# "\e[1;5C": forward-word
+# "\e[1;5D": backward-word
+# "\M-\C-[A": previous-history
+# "\M-\C-[B": next-history
