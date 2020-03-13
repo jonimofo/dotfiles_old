@@ -5,23 +5,19 @@ alias tototo="echo lenovo"
 
 # Edition of dotfiles
 alias bedit="chezmoi edit ~/.bashrc"
-alias vedit="chezmoi edit ~/.vimrc"
-alias balias="chezmoi edit ~/.bash_aliases"
-alias tedit="chezmoi edit ~/.tmux.conf"
 alias bprofile="chezmoi edit ~/.bash_profile"
+alias balias="chezmoi edit ~/.bash_aliases"
+alias vedit="chezmoi edit ~/.vimrc"
+alias nedit="chezmoi edit ~/.nvimrc"
+alias tedit="chezmoi edit ~/.tmux.conf"
 alias bala="chezmoi edit ~/.config/alacritty/alacritty.yml"
 alias ch="cd ~/.local/share/chezmoi"
-alias kiedit="chezmoi edit ~/.config/kitty/kitty.conf"
-# Kcli
-alias kedit="chezmoi edit ~/.kcli/config.yml"
-alias kcedit="chezmoi edit ~/.kcli/profiles.yml"
 
 # Commands
 alias ls="exa"
 alias ll="exa -l"
 alias l="exa -la"
 alias lt="exa -lT"
-alias ssc="sudo systemctl"
 alias cat="bat"
 alias python="/usr/local/bin/python3"
 alias vvenv="python3 -m venv venv && source venv/bin/activate"
@@ -63,7 +59,6 @@ alias vdf="vagrant destroy -f"
 alias vre="vagrant reload"
 alias wss="watch vagrant status"
 
-
 # Tmux
 alias tma="tmux attach-session"
 
@@ -99,11 +94,7 @@ alias g="cd ~/Google-Drive"
 alias t="cd ~/Templates"
 alias des="cd ~/Desktop"
 
-# Copy/Paste
-alias "cx=xclip" # copy to X clipboard (register *)
-alias "cs=xclip -selection clipboard" # copy to system wide clipboard (register +)
-# alias "v=xclip -o" # output copied content (paste)
-# alias "vs=xclip -o -selection clipboard" # paste from system wide clipboard (equivalent to `v -selection clipboard`)
+# TODO Copy/Paste
 
 # Apps
 alias bsync="browser-sync start --server --files='style.css, *.html'"
@@ -111,9 +102,4 @@ alias bsync="browser-sync start --server --files='style.css, *.html'"
 # Derp
 alias guigui="echo l'algo benji ! l'algo"
 
-{{- end }}
-
-### MAC OS
-{{- if eq .chezmoi.hostname "damien" }}
-alias titi="echo c'est Damien El Macbook"
 {{- end }}
