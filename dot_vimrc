@@ -1,0 +1,104 @@
+
+
+" TODO Change color scheme ?
+" TODO Yank stuff
+" TODO Map qq to exit buffer from Documentation popup
+
+"---------------------------------
+" PLUGINS
+"---------------------------------
+call plug#begin('~/.vim/plugged')
+
+" File explorer
+Plug 'mcchrish/nnn.vim'
+" Status Bar
+Plug 'itchyny/lightline.vim'
+" Completion
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+" Searching
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+" Code
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
+Plug 'TonyChG/MagicTemplate'
+Plug 'tomtom/tcomment_vim'
+" Indenting
+Plug 'avakhov/vim-yaml'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+call plug#end()
+
+
+"---------------------------------
+" GENERAL
+"---------------------------------
+" KeyBindings
+let mapleader=","
+
+" Set syntax colors
+syntax on
+set encoding=UTF-8
+
+" Indent
+set autoindent
+set smartindent
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set laststatus=2
+
+" Infos
+set nonumber           " disable line numbers
+set wildmenu           " visual autocomplete for command menu
+set timeout            " for mappings
+set timeoutlen=1000    " default value
+set ttimeout           " for key codes
+set ttimeoutlen=0      " unnoticeable small value
+
+" set ignorecase
+set smartcase
+set backspace=2
+
+" FZF
+let $FZF_DEFAULT_COMMAND='fd -H -t f -E venv -E target -E .git'
+nnoremap <C-f> :FZF<CR>
+nnoremap <C-b> :Buffers<CR>
+
+" Snippets
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-x>"
+let g:UltiSnipsJumpBackwardTrigger="<c-c>"
+
+" Helper for indent mistake
+set list listchars=tab:»·,trail:·
+
+" Set settings for file types
+filetype plugin on
+filetype plugin indent on
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Navigate between panes
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" TODO Yank
+
+
+"---------------------------------
+" STYLE
+"---------------------------------
+" Change auto-complete color
+highlight Pmenu ctermbg=gray guibg=gray
+" Color scheme
+colorscheme monokai
+
+" Status bas colorscheme
+let g:lightline = { 'colorscheme': 'wombat'}
