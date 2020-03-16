@@ -1,9 +1,7 @@
 {{- if eq .chezmoi.hostname "lenovo" }}
 
 # Global
-export EDITOR="vim"
-export TERM="xterm-256color"
-export CLICOLOR=1
+export EDITOR="nvim"
 
 # Add path for Ipython and Jupyter
 export PATH=$PATH:/home/mofo/.local/bin/
@@ -22,16 +20,12 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
-## CLI
 # Fasd
 eval "$(fasd --init auto)"
 
-# Kcli
-eval "$(register-python-argcomplete kcli)"
-
 # Clean history
 unset export HISTIGNORE
-export HISTIGNORE=$HISTIGNORE:'l:ls:ll:lt *:history:pwd:man *:fg:bg:jobs *:echo *'
+export HISTIGNORE=$HISTIGNORE:'l:ls:ll:lt *:history:pwd:man *:fg:bg:jobs *'
 
 # Ignore duplicate commands
 export HISTCONTROL=ignoredups
@@ -43,4 +37,3 @@ export HISTCONTROL=ignoredups
 [ -f $HOME/.fzf.bash ] && source ~/.fzf.bash
 
 {{- end }}
-[ -f $HOME/.fzf.bash ] && source ~/.fzf.bash

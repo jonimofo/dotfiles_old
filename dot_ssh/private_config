@@ -1,8 +1,0 @@
-Host *
-    # ForwardAgent yes
-    StrictHostKeyChecking no
-
-Host kvm
-    HostName kvm.mofo.ovh
-    IdentityFile ~/.ssh/id_rsa
-    User mofo
