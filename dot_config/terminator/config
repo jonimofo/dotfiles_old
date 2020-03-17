@@ -25,6 +25,7 @@
   zoom_normal = <Ctrl>0
   toggle_zoom = <Alt>Z
   layout_launcher = <Alt><Shitf>L
+  new_window = <Alt><Shift>N
 [layouts]
   [[default]]
     [[[child1]]]
@@ -46,3 +47,4 @@
     show_titlebar = False
     use_system_font = False
     scrollbar_position = disabled
+    scrollback_lines = 1000
