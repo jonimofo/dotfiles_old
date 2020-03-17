@@ -24,6 +24,7 @@
   zoom_out = <Ctrl>minus
   zoom_normal = <Ctrl>0
   toggle_zoom = <Alt>Z
+  layout_launcher = <Alt><Shitf>L
 [layouts]
   [[default]]
     [[[child1]]]
