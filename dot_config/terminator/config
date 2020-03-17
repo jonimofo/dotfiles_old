@@ -22,6 +22,8 @@
   split_vert = <Alt>I
   zoom_in = <Ctrl>plus
   zoom_out = <Ctrl>minus
+  zoom_normal = <Ctrl>0
+  toggle_zoom = <Alt>Z
 [layouts]
   [[default]]
     [[[child1]]]
