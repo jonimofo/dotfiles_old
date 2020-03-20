@@ -32,6 +32,9 @@ ip -4 a | grep inet | awk '{print $2}'
 }
 alias ipinet=ipinet
 
+# Restic
+alias rr="restic -r ${RESTIC_REPOSITORY}"
+
 # Docker
 alias dc='docker-compose'
 alias dcl='docker container ls'
