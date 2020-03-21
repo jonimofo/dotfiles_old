@@ -1,5 +1,3 @@
-
-
 " TODO Change color scheme ?
 " TODO Yank stuff
 " TODO Map qq to exit buffer from Documentation popup
@@ -25,6 +23,7 @@ Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 Plug 'TonyChG/MagicTemplate'
 Plug 'tomtom/tcomment_vim'
 " Indenting
+Plug 'godlygeek/tabular'
 Plug 'avakhov/vim-yaml'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
