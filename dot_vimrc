@@ -11,7 +11,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
 " Searching
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Code
 Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
@@ -57,7 +57,8 @@ set backspace=2
 
 " FZF
 " TODO fix this
-let $FZF_DEFAULT_COMMAND='fd -H -t f -E venv -E target -E .git'
+" let $FZF_DEFAULT_COMMAND='fd'
+" let $FZF_DEFAULT_COMMAND='fd -H -t f -E venv -E target -E .git'
 nnoremap <C-f> :FZF<CR>
 nnoremap <C-b> :Buffers<CR>
 
