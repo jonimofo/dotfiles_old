@@ -25,7 +25,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Swap panes with <leader <<> <leader <<>
 Plug 'wesQ3/vim-windowswap'
-
+Plug 'gorkunov/smartpairs'
 call plug#end()
 
 
@@ -96,10 +96,19 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" TODO key bind create splits
 " More natural splits opening
 set splitbelow
 set splitright
+
+" Source : https://medium.com/@vinodkri/zooming-vim-window-splits-like-a-pro-d7a9317d40
+" Neat trick to zoom-in and zoom-out the splits
+" The command’s wont close any buffers like CTRL-W + o would.
+" :help window-resize
+" CTRL-W + | Set current window width to N (default: widest possible).
+" CTRL-W + _ Set current window height to N (default: highest possible).
+" CTRL-W + = Make all windows (almost) equally high and wide.
+noremap Zz <c-w>_ \| <c-w>\|
+noremap Zo <c-w>=
 
 " Navigate between Tabs
 nnoremap tn  :tabnew<CR>
@@ -131,6 +140,11 @@ colorscheme monokai
 " Status bas colorscheme
 let g:lightline = { 'colorscheme': 'wombat'}
 
+
+" -----------------------------------------
+" ABR
+" -----------------------------------------
+ab abash #!/bin/bash<CR>#Date:strftime("%c")<CR>#Description:
 
 
 " -----------------------------------------

@@ -20,7 +20,7 @@ alias l="exa -la"
 alias lt="exa -lT"
 alias cat="batcat"
 alias fd="fdfind"
-alias vvenv="python3 -m venv venv && source venv/bin/activate"
+alias vvenv='python3 -m venv venv && source venv/bin/activate'
 
 # Network
 alias nmm='nmap 127.0.0.1'
@@ -33,21 +33,28 @@ alias ipinet=ipinet
 # Restic
 alias rr="restic -r ${RESTIC_REPOSITORY}"
 
+
 # Docker
-alias dc='docker-compose'
 alias dcl='docker container ls'
 alias di='docker images'
-alias dci='docker-compose images'
 alias ds='docker stop'
+alias dr="docker run"
 alias dp='docker ps'
-alias dcp='docker-compose ps'
 alias dpa='docker ps -a'
+alias dei='docker exec -it'
+alias dvl="docker volume ls"
+
+# Docker-Compose
+alias dc='docker-compose'
+alias dcp='docker-compose ps'
 alias dcu='docker-compose up -d'
 alias dch='docker-compose -h'
 alias dcs='docker-compose stop'
+alias dci='docker-compose images'
+alias dcc="docker-compose config"
 alias dcw='docker-compose restart'
 alias dcl='docker-compose logs -f'
-alias dei='docker exec -it'
+
 
 # Vagrant
 alias vu="vagrant up"
@@ -62,8 +69,10 @@ alias vdf="vagrant destroy -f"
 alias vre="vagrant reload"
 alias wss="watch vagrant status"
 
+
 # Tmux
 alias tma="tmux attach-session"
+
 
 # Git
 alias gs="git status -s"
@@ -75,6 +84,7 @@ alias gd="git diff"
 alias glog="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --stat"
 alias glg="git log --oneline --decorate --graph --all"
 
+
 # Fasd
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
@@ -85,6 +95,7 @@ alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim' # quick opening files with vim
+
 
 # Dossiers
 alias ..="cd .."
