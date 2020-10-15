@@ -71,7 +71,7 @@ let g:nnn#action = {
 " Change auto-complete color
 highlight Pmenu ctermbg=gray guibg=gray
 " Color scheme
-colorscheme monokai
+colorscheme darkblue
 
 
 " -----------------------------------------
