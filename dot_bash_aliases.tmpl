@@ -35,24 +35,24 @@ alias rr="restic -r ${RESTIC_REPOSITORY}"
 
 
 # Docker
-alias dcl='docker container ls'
 alias di='docker images'
 alias ds='docker stop'
 alias dr="docker run"
 alias dp='docker ps'
 alias dpa='docker ps -a'
 alias dei='docker exec -it'
+alias dcl='docker container ls'
 alias dvl="docker volume ls"
 
 # Docker-Compose
 alias dc='docker-compose'
 alias dcp='docker-compose ps'
 alias dcu='docker-compose up -d'
-alias dch='docker-compose -h'
+alias dcd='docker-compose down'
 alias dcs='docker-compose stop'
 alias dci='docker-compose images'
 alias dcc="docker-compose config"
-alias dcw='docker-compose restart'
+alias dcr='docker-compose restart'
 alias dcl='docker-compose logs -f'
 
 
