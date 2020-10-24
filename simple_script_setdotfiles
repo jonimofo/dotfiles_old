@@ -1,8 +1,0 @@
-#!/bin/bash
-# Bash
-curl https://raw.githubusercontent.com/jonimofo/dotfiles/master/simple_bashrc > $HOME/.bashrc
-curl https://raw.githubusercontent.com/jonimofo/dotfiles/master/simple_inputrc > $HOME/.inputrc
-# Vim
-curl https://raw.githubusercontent.com/jonimofo/dotfiles/master/simple_vimrc > $HOME/.vimrc
-# Tmux
-curl https://raw.githubusercontent.com/jonimofo/dotfiles/master/simple_tmux > $HOME/.tmux.conf

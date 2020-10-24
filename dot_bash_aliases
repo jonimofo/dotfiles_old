@@ -1,5 +1,3 @@
-{{- if eq .chezmoi.hostname "lenovo" }}
-
 # Edition of dotfiles
 alias bedit="chezmoi edit ~/.bashrc"
 alias bprofile="chezmoi edit ~/.bash_profile"
@@ -9,7 +7,6 @@ alias nedit="chezmoi edit ~/.nvimrc"
 alias tedit="chezmoi edit ~/.tmux.conf"
 alias bala="chezmoi edit ~/.config/alacritty/alacritty.yml"
 alias ch="cd ~/.local/share/chezmoi"
-alias sand="cd ~/Sandbox"
 
 # Commands
 alias rm="rm -i"
@@ -20,7 +17,7 @@ alias l="exa -la"
 alias lt="exa -lT"
 alias cat="batcat"
 alias fd="fdfind"
-alias vvenv='python3 -m venv venv && source venv/bin/activate'
+alias vvenv='python3 -m venv .venv && source .venv/bin/activate'
 
 # Network
 alias nmm='nmap 127.0.0.1'
@@ -54,7 +51,7 @@ alias dcs='docker-compose stop'
 alias dci='docker-compose images'
 alias dcc="docker-compose config"
 alias dcr='docker-compose restart'
-alias dcl='docker-compose logs -f'
+alias dcf='docker-compose logs -f'
 
 
 # Vagrant
@@ -97,26 +94,25 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim' # quick opening files with vim
 
+# Terraform
+alias tfi='terraform init'
+alias tfa='terraform apply'
+alias tfd='terraform destroy'
+
 
 # Dossiers
 alias ..="cd .."
 alias ...="cd ../.."
-alias r="cd /media/mofo/Donnees/Repos"
+alias r="cd ~/Repos"
 alias doc="cd ~/Documents"
 alias donn="cd ~/Donnees"
 alias dow="cd ~/Downloads"
-alias i="cd ~/Isos"
-alias g="cd ~/Google-Drive"
+alias g="cd ~/GoogleDrive"
 alias t="cd ~/Templates"
 alias des="cd ~/Desktop"
-alias win="cd /media/mofo/Win10/Users/mofo"
+alias lab="cd ~/Lab"
 
 # TODO Copy/Paste
 
-# Apps
-alias bsync="browser-sync start --server --files='style.css, *.html'"
-
 # Derp
 alias guigui="echo l'algo benji ! l'algo"
-
-{{- end }}

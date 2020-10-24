@@ -1,13 +1,8 @@
-{{- if eq .chezmoi.hostname "lenovo" }}
-
 # Custom prompt
 export PS1="[\[\e[1;33m\]\u\[\e[m\]\[\e[1;32m\] \[\e[m\]\[\e[1;32m\]\h\[\e[m\] \[\e[1;36m\]\W\[\e[m\]] \\$ "
 
-# Global
+# Global editor
 export EDITOR="nvim"
-
-# Add path for Ipython and Jupyter
-export PATH=$PATH:/home/mofo/.local/bin/
 
 # Fancier LESS (and man)
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
@@ -26,20 +21,16 @@ export TLDR_DESCRIPTION='green'
 export TLDR_CODE='red'
 export TLDR_PARAM='blue'
 
-# Fasd
-eval "$(fasd --init auto)"
-
 # Clean history
 unset export HISTIGNORE
 export HISTIGNORE=$HISTIGNORE:'l:ls:ll:lt *:history:pwd:man *:fg:bg:jobs *'
 # Ignore duplicate commands
 export HISTCONTROL=ignoredups
 
-# Sourcing
-[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
-[ -f $HOME/.bash_git_completion ] && source $HOME/.bash_git_completion
-[ -f $HOME/.git-prompt.sh ] && source $HOME/.git-prompt.sh
-[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
-[ -f $HOME/.fzf.bash ] && source ~/.fzf.bash
+# Fasd
+eval "$(fasd --init auto)"
 
-{{- end }}
+# Sourcing
+# [ -f $HOME/.bash_git_completion ] && source $HOME/.bash_git_completion
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+[ -f $HOME/.fzf.bash ] && source ~/.fzf.bash
