@@ -1,6 +1,7 @@
 #!/bin/bash
 
 code --install-extension aaron-bond.better-comments
+code --install-extension azemoh.one-monokai
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension cstrap.python-snippets
 code --install-extension DavidAnson.vscode-markdownlint
