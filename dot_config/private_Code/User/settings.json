@@ -1,0 +1,13 @@
+{
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 1,
+    "jupyter.askForKernelRestart": false,
+    "extensions.ignoreRecommendations": true,
+    "jupyter.alwaysTrustNotebooks": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
+}
