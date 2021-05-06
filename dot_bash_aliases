@@ -8,6 +8,10 @@ alias tedit="chezmoi edit ~/.tmux.conf"
 alias bala="chezmoi edit ~/.config/alacritty/alacritty.yml"
 alias ch="cd ~/.local/share/chezmoi"
 
+#TODO set only for QDV
+# alias od='cd /home/bgi/Dropbox (TEAM DROPBOX QDV)/SEB SAP/00002- MACROS EXCEL - BGI GHA/__ODBC'
+# alias bg='cd /home/bgi/Dropbox (TEAM DROPBOX QDV)/SEB SAP/00000- MACROS EXCEL - BGI GHA/00000-BGI'
+
 # Commands
 alias rm="rm -i"
 alias vim="nvim"
