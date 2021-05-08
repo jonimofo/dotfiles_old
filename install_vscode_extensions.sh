@@ -5,6 +5,7 @@ code --install-extension azemoh.one-monokai
 code --install-extension CoenraadS.bracket-pair-colorizer
 code --install-extension cstrap.python-snippets
 code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter

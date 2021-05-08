@@ -8,10 +8,6 @@ alias tedit="chezmoi edit ~/.tmux.conf"
 alias bala="chezmoi edit ~/.config/alacritty/alacritty.yml"
 alias ch="cd ~/.local/share/chezmoi"
 
-#TODO set only for QDV
-# alias od='cd /home/bgi/Dropbox (TEAM DROPBOX QDV)/SEB SAP/00002- MACROS EXCEL - BGI GHA/__ODBC'
-# alias bg='cd /home/bgi/Dropbox (TEAM DROPBOX QDV)/SEB SAP/00000- MACROS EXCEL - BGI GHA/00000-BGI'
-
 # Commands
 alias rm="rm -i"
 alias vim="nvim"
@@ -21,19 +17,7 @@ alias l="exa -la"
 alias lt="exa -lT"
 alias cat="batcat -p"
 alias fd="fdfind"
-alias vvenv='python3 -m venv .venv && source .venv/bin/activate'
-
-# Network
-alias nmm='nmap 127.0.0.1'
-alias sss='ss -s'
-function ipinet(){
-ip -4 a | grep inet | awk '{print $2}'
-}
-alias ipinet=ipinet
-
-# Restic
-alias rr="restic -r ${RESTIC_REPOSITORY}"
-
+alias vvenv='/usr/bin/python3 -m venv .venv && source .venv/bin/activate'
 
 # Docker
 alias di='docker images'
@@ -57,7 +41,6 @@ alias dcc="docker-compose config"
 alias dcr='docker-compose restart'
 alias dcf='docker-compose logs -f'
 
-
 # Vagrant
 alias vu="vagrant up"
 alias vs="vagrant ssh"
@@ -71,10 +54,8 @@ alias vdf="vagrant destroy -f"
 alias vre="vagrant reload"
 alias wss="watch vagrant status"
 
-
 # Tmux
 alias tma="tmux attach-session"
-
 
 # Git
 alias gs="git status -s"
@@ -86,7 +67,6 @@ alias gd="git diff"
 alias glog="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --stat"
 alias glg="git log --oneline --decorate --graph --all"
 alias gcm="git commit -m"
-
 
 # Fasd
 alias a='fasd -a'        # any
@@ -104,7 +84,6 @@ alias tfi='terraform init'
 alias tfa='terraform apply'
 alias tfd='terraform destroy'
 
-
 # Dossiers
 alias ..="cd .."
 alias ...="cd ../.."
@@ -117,7 +96,22 @@ alias t="cd ~/Templates"
 alias des="cd ~/Desktop"
 alias lab="cd ~/Lab"
 
-# TODO Copy/Paste
+# Network
+function ipinet(){
+ip -4 a | grep inet | awk '{print $2}'
+}
+alias ipinet=ipinet
 
 # Derp
 alias guigui="echo l'algo benji ! l'algo"
+
+
+
+############################################################
+# ONLY FOR QDV
+############################################################
+
+{{ if (eq .chezmoi.hostname "dell") }}
+alias od='cd "/home/bgi/Dropbox (TEAM DROPBOX QDV)/SEB SAP/00000- MACROS EXCEL - BGI GHA"'
+alias bb='cd "/home/bgi/Dropbox (TEAM DROPBOX QDV)/SEB SAP/00000- MACROS EXCEL - BGI GHA/00000-BGI"'
+{{ end }}
