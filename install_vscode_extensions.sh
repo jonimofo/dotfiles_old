@@ -1,12 +1,21 @@
 #!/bin/bash
 
-code --install-extension aaron-bond.better-comments
-code --install-extension azemoh.one-monokai
-code --install-extension CoenraadS.bracket-pair-colorizer
-code --install-extension cstrap.python-snippets
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension esbenp.prettier-vscode
-code --install-extension ms-python.python
-code --install-extension ms-toolsai.jupyter
-code --install-extension njpwerner.autodocstring
+extensions=(
+aaron-bond.better-comments
+azemoh.one-monokai
+CoenraadS.bracket-pair-colorizer
+cstrap.python-snippets
+DavidAnson.vscode-markdownlint
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-python.python
+ms-toolsai.jupyter
+njpwerner.autodocstring
+)
+
+
+for extension in "${extensions[@]}"
+do
+   : 
+   code --install-extension $extension
+done
