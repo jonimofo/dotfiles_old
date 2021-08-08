@@ -34,3 +34,4 @@ eval "$(fasd --init auto)"
 # [ -f $HOME/.bash_git_completion ] && source $HOME/.bash_git_completion
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
 [ -f $HOME/.fzf.bash ] && source ~/.fzf.bash
+

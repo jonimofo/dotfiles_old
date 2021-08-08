@@ -47,13 +47,33 @@
   { "keys": ["ctrl+shift+d"], "command": "toggle_distraction_free" },
   { "keys": ["ctrl+shift+m"], "command": "toggle_menu"},
 
+  // COLUMNS LAYOUT
+  {
+    "keys": ["alt+shift+&"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1]]
+    }
+  },
+  {
+    "keys": ["alt+shift+é"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 0.5, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+    }
+  },
+
 
   // ----------------------------------------------------------------------
   // TO DO / TO FIX
   // ----------------------------------------------------------------------
 
-  // TODO
-    // always hide minimap
-    // Select line with cursor same position
-    // shortcut to generate layouts = (2 vertical)
+      // Select line with cursor same position
+
 ]
