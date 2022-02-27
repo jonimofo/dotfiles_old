@@ -1,3 +1,15 @@
+parse_git_branch() {
+    BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
+
+    if [[ -z ${BRANCH} ]]; then
+        echo ""
+    else
+        echo "${BRANCH}"
+    fi
+}
+
+# Prompt
+#PS1="\w\$(parse_git_branch) ~> "; export PS1
 # Custom prompt
 export PS1="[\[\e[1;33m\]\u\[\e[m\]\[\e[1;32m\] \[\e[m\]\[\e[1;32m\]\h\[\e[m\] \[\e[1;36m\]\W\[\e[m\]] \\$ "
 
@@ -29,6 +41,10 @@ export HISTCONTROL=ignoredups
 
 # Fasd
 eval "$(fasd --init auto)"
+
+# Docker rootless
+export PATH=/home/bgi/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 # Sourcing
 # [ -f $HOME/.bash_git_completion ] && source $HOME/.bash_git_completion
